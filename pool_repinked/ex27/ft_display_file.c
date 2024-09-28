@@ -1,20 +1,21 @@
 /* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_display_file.c                                  :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: patricia <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/26 21:43:39 by patricia          #+#    #+#             */
-/*   Updated: 2024/09/26 23:09:37 by patricia         ###   ########.fr       */
-/*                                                                            */
+/*                                                            .-.             */
+/*                                                           ((`-)            */
+/*   ft_display_file.c                                       \\               */
+/*                                                    .="""=._))              */
+/*   By: patricia <**@gmail.com>                     /  .*    .'              */
+/*                                                 `  /|                      */
+/*   				                     /_|__                    */
+/*   Created: 2024/09/28 23:27:34 by patricia          | `))                  */
+/*   Updated: 2024/09/28 23:27:34 by patricia          |                      */
+/*                                               PINK -"== 24           🦩    */
 /* ************************************************************************** */
 
 #include "ft_display_file.h"
 
 int	ft_display_file(const char *filename)
 {
-	int	fd;
+	int		fd;
 	char	buffer[BUFFER_SIZE];
 	ssize_t	bytes_read;
 

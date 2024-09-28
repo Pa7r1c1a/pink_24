@@ -1,24 +1,24 @@
 /* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: patricia <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/23 16:58:29 by patricia          #+#    #+#             */
-/*   Updated: 2024/09/23 17:11:20 by patricia         ###   ########.fr       */
-/*                                                                            */
+/*                                                            .-.             */
+/*                                                           ((`-)            */
+/*   ft_div_mod.c                                            \\               */
+/*                                                    .="""=._))              */
+/*   By: patricia <**@gmail.com>                     /  .*    .'              */
+/*                                                 `  /|                      */
+/*   				                     /_|__                    */
+/*   Created: 2024/09/29 00:08:13 by patricia          | `))                  */
+/*   Updated: 2024/09/29 00:08:13 by patricia          |                      */
+/*                                               PINK -"== 24           🦩    */
 /* ************************************************************************** */
 
-void	ft_putnbr(int nb);
-void	ft_putchar(char c);
-
+/*void	ft_putnbr(int nb);
+void	ft_putchar(char c);*/
 void	ft_div_mod(int a, int b, int *div, int *mod)
 {
 	*div = a / b;
 	*mod = a % b;
 }
-
+/*
 int	main(void)
 {
 	int	value_a;
@@ -37,3 +37,4 @@ int	main(void)
 	ft_putchar('\n');
 	return (0);
 }
+*/

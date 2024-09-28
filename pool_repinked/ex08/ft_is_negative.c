@@ -1,17 +1,18 @@
 /* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: patricia <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/23 14:53:25 by patricia          #+#    #+#             */
-/*   Updated: 2024/09/23 15:53:14 by patricia         ###   ########.fr       */
-/*                                                                            */
+/*                                                            .-.             */
+/*                                                           ((`-)            */
+/*   ft_is_negative.c                                        \\               */
+/*                                                    .="""=._))              */
+/*   By: patricia <**@gmail.com>                     /  .*    .'              */
+/*                                                 `  /|                      */
+/*   				                     /_|__                    */
+/*   Created: 2024/09/29 00:03:27 by patricia          | `))                  */
+/*   Updated: 2024/09/29 00:03:27 by patricia          |                      */
+/*                                               PINK -"== 24           🦩    */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
-int		ft_atoi(char *nptr);
+/*int		ft_atoi(char *nptr);*/
 
 void	ft_is_negative(int n)
 {
@@ -20,7 +21,7 @@ void	ft_is_negative(int n)
 	else
 		ft_putchar('N');
 }
-
+/*
 int	main(int argc, char *argv[])
 {
 	int	n;
@@ -30,3 +31,4 @@ int	main(int argc, char *argv[])
 		ft_is_negative(n);
 	return (0);
 }
+*/

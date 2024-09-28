@@ -1,39 +1,30 @@
 /* ************************************************************************** */
 /*                                                            .-.             */
 /*                                                           ((`-)            */
-/*   ft_iterative_factorial.c                                \\               */
+/*   main.c                                                  \\               */
 /*                                                    .="""=._))              */
 /*   By: patricia <**@gmail.com>                     /  .*    .'              */
 /*                                                 `  /|                      */
 /*   				                     /_|__                    */
-/*   Created: 2024/09/29 00:09:08 by patricia          | `))                  */
-/*   Updated: 2024/09/29 00:09:08 by patricia          |                      */
+/*   Created: 2024/09/29 00:23:07 by patricia          | `))                  */
+/*   Updated: 2024/09/29 00:23:07 by patricia          |                      */
 /*                                               PINK -"== 24           🦩    */
 /* ************************************************************************** */
 
-/* void	ft_putnbr(int nb);
-void	ft_putchar(char c); */
-int	ft_iterative_factorial(int nb)
-{
-	int	i;
-	int	result;
+#include "ft_point.h"
+#include <stdio.h>
 
-	i = 1;
-	result = 1;
-	if (nb < 0 || nb > 12)
-		return (0);
-	while (i <= nb)
-	{
-		result *= i;
-		i++;
-	}
-	return (result);
+void	set_point(t_point *point)
+{
+	point->x = 42;
+	point->y = 21;
 }
-/*
+
 int	main(void)
 {
-	ft_putnbr(ft_iterative_factorial(0));
-	ft_putchar('\n');
+	t_point	point;
+
+	set_point(&point);
+	printf("x = %d \ny = %d\n", point.x, point.y);
 	return (0);
 }
-*/

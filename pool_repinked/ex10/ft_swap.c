@@ -1,17 +1,17 @@
 /* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: patricia <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/23 16:35:03 by patricia          #+#    #+#             */
-/*   Updated: 2024/09/23 16:47:37 by patricia         ###   ########.fr       */
-/*                                                                            */
+/*                                                            .-.             */
+/*                                                           ((`-)            */
+/*   ft_swap.c                                               \\               */
+/*                                                    .="""=._))              */
+/*   By: patricia <**@gmail.com>                     /  .*    .'              */
+/*                                                 `  /|                      */
+/*   				                     /_|__                    */
+/*   Created: 2024/09/29 00:07:31 by patricia          | `))                  */
+/*   Updated: 2024/09/29 00:07:31 by patricia          |                      */
+/*                                               PINK -"== 24           🦩    */
 /* ************************************************************************** */
 
-void	ft_putnbr(int nb);
-
+/*void	ft_putnbr(int nb);*/
 void	ft_swap(int *a, int *b)
 {
 	int	temp;
@@ -20,7 +20,7 @@ void	ft_swap(int *a, int *b)
 	*a = *b;
 	*b = temp;
 }
-
+/*
 int	main(void)
 {
 	int	value_a;
@@ -33,3 +33,4 @@ int	main(void)
 	ft_putnbr(value_b);
 	return (0);
 }
+*/

@@ -1,0 +1,23 @@
+::::::::::: STRUCTURE :::::::::::
+
+libftprintf/
+│
+├── include/
+│   ├── ft_printf.h
+│   └── ft_printf_bonus.h
+│
+├── libft/
+│   └── ... (your libft files)
+│
+├── src/
+│   ├── ft_printf.c
+│   ├── print_char.c
+│   ├── print_string.c
+│   ├── print_integer.c
+│   ├── print_unsigned.c
+│   ├── print_hex.c
+│   ├── print_pointer.c
+│   ├── print_bonus_int.c
+│   └── print_bonus_hex.c
+│
+└── Makefile

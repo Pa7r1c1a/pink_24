@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                            .-.             */
 /*                                                           ((`-)            */
-/*   ft_printf.c                                             \\               */
+/*   own_itoa.c                                              \\               */
 /*                                                    .="""=._))              */
 /*   By: patricia <**@gmail.com>                     /  .*    .'              */
 /*                                                 `  /|                      */
 /*   				                     /_|__                    */
-/*   Created: 2024/10/23 18:21:59 by patricia          | `))                  */
-/*   Updated: 2024/10/23 18:21:59 by patricia          |                      */
+/*   Created: 2024/10/16 15:05:10 by patricia          | `))                  */
+/*   Updated: 2024/10/16 15:05:10 by patricia          |                      */
 /*                                               PINK -"== 24           🦩    */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "ownlib.h"
 
-int	ft_printf(const char *format, ...)
+char	*own_itoa(int n)
 {
-	va_list	args;
-	int		total_displayed;
-
-	va_start(args, format);
-	total_displayed = pprint_and_return(format, args);
-	va_end(args);
-	return (total_displayed);
+	char	*nstr;
+	int	sign;
+	if (n == -2147483648)
+	{
+		nstr = "-2147483648";
+		return (nstr);
+	}
+	if (n < 0)
+	{
+		nstr[0] = "-";
+		nstr++;
+	}
+	
+	return (nstr);
 }

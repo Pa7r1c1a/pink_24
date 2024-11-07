@@ -11,13 +11,13 @@
 /*                                               PINK -"== 24           🦩    */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../include/ft_printf.h"
+#include "../libft/libft.h"
 
-int	print_string(char *str, t_format format)
+int	print_string(char *str)
 {
 	int	len;
 
-	(void)format;
 	if (!str)
 		str = "(null)";
 	len = ft_strlen(str);

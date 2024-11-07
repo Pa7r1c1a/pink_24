@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                            .-.             */
 /*                                                           ((`-)            */
-/*   ft_printf.c                                             \\               */
+/*   print_char_bonus.c                                      \\               */
 /*                                                    .="""=._))              */
 /*   By: patricia <**@gmail.com>                     /  .*    .'              */
 /*                                                 `  /|                      */
 /*   				                     /_|__                    */
-/*   Created: 2024/10/23 18:21:59 by patricia          | `))                  */
-/*   Updated: 2024/10/23 18:21:59 by patricia          |                      */
+/*   Created: 2024/11/03 00:12:15 by patricia          | `))                  */
+/*   Updated: 2024/11/03 00:12:15 by patricia          |                      */
 /*                                               PINK -"== 24           🦩    */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "ft_printf_bonus.h"
 
-int	ft_printf(const char *format, ...)
+int	print_char_bonus(int c, t_format format)
 {
-	va_list	args;
-	int		total_displayed;
-
-	va_start(args, format);
-	total_displayed = pprint_and_return(format, args);
-	va_end(args);
-	return (total_displayed);
+	(void)format;
+	return (write(1, &c, 1));
 }

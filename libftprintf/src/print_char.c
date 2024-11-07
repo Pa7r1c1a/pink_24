@@ -11,10 +11,9 @@
 /*                                               PINK -"== 24           🦩    */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../include/ft_printf.h"
 
-int	print_char(char c, t_format format)
+int	print_char(int c)
 {
-	(void)format;
 	return (write(1, &c, 1));
 }

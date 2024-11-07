@@ -11,30 +11,33 @@
 /*                                               PINK -"== 24           🦩    */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../include/ft_printf.h"
 
 int	pprint_and_return(const char *format, va_list args)
 {
-	int			i;
-	int			printed_chars;
-	t_format	fmt;
+	int	i;
+	int	printed_chars;
+	int	check;
 
-	fmt = parse_flags(format, &i);
-	i = 0;
+	check = 0;
+	i = -1;
 	printed_chars = 0;
-	while (format[i])
+	while (format[++i])
 	{
-		if (format[i] == '%')
+		if (format[i] == '%' && format[i + 1] != '\0')
 		{
 			i++;
-			printf_print(format[i], args, fmt);
+			check = printf_print(format[i], args);
+			if (check == -1)
+				return (-1);
+			printed_chars += check;
 		}
 		else
 		{
-			write(1, &format[i], 1);
+			if (write(1, &format[i], 1) == -1)
+				return (-1);
 			printed_chars++;
 		}
-		i++;
 	}
 	return (printed_chars);
 }

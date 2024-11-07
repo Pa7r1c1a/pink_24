@@ -1,25 +1,39 @@
 /* ************************************************************************** */
 /*                                                            .-.             */
 /*                                                           ((`-)            */
-/*   ft_printf.c                                             \\               */
+/*   print_hex_bonus.c                                       \\               */
 /*                                                    .="""=._))              */
 /*   By: patricia <**@gmail.com>                     /  .*    .'              */
 /*                                                 `  /|                      */
 /*   				                     /_|__                    */
-/*   Created: 2024/10/23 18:21:59 by patricia          | `))                  */
-/*   Updated: 2024/10/23 18:21:59 by patricia          |                      */
+/*   Created: 2024/11/04 15:29:24 by patricia          | `))                  */
+/*   Updated: 2024/11/04 15:29:24 by patricia          |                      */
 /*                                               PINK -"== 24           🦩    */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "ft_printf_bonus.h"
 
-int	ft_printf(const char *format, ...)
+int	print_hex_bonus(unsigned int n, int uppercase, t_format format)
 {
-	va_list	args;
-	int		total_displayed;
+	char	*str;
+	int		len;
+	int		i;
 
-	va_start(args, format);
-	total_displayed = pprint_and_return(format, args);
-	va_end(args);
-	return (total_displayed);
+	(void)format;
+	str = ft_itoa_base(n, 16);
+	if (!str)
+		return (-1);
+	len = ft_strlen(str);
+	if (uppercase)
+	{
+		i = 0;
+		while (str[i])
+		{
+			str[i] = ft_toupper(str[i]);
+			i++;
+		}
+	}
+	ft_putstr_fd(str, 1);
+	free(str);
+	return (len);
 }

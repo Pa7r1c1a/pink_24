@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                            .-.             */
 /*                                                           ((`-)            */
-/*   ft_printf.c                                             \\               */
+/*   print_integer_bonus.c                                   \\               */
 /*                                                    .="""=._))              */
 /*   By: patricia <**@gmail.com>                     /  .*    .'              */
 /*                                                 `  /|                      */
 /*   				                     /_|__                    */
-/*   Created: 2024/10/23 18:21:59 by patricia          | `))                  */
-/*   Updated: 2024/10/23 18:21:59 by patricia          |                      */
+/*   Created: 2024/11/04 15:22:17 by patricia          | `))                  */
+/*   Updated: 2024/11/04 15:22:17 by patricia          |                      */
 /*                                               PINK -"== 24           🦩    */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "ft_printf_bonus.h"
+#include "../libft/libft.h"
 
-int	ft_printf(const char *format, ...)
+int	print_integer_bonus(int n, t_format format)
 {
-	va_list	args;
-	int		total_displayed;
+	char	*strn;
+	int		len;
 
-	va_start(args, format);
-	total_displayed = pprint_and_return(format, args);
-	va_end(args);
-	return (total_displayed);
+	(void)format;
+	strn = ft_itoa(n);
+	if (!strn)
+		return (-1);
+	len = ft_strlen(strn);
+	ft_putstr_fd(strn, 1);
+	free(strn);
+	return (len);
 }

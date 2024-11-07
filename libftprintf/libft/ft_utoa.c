@@ -1,25 +1,39 @@
 /* ************************************************************************** */
 /*                                                            .-.             */
 /*                                                           ((`-)            */
-/*   ft_printf.c                                             \\               */
+/*   ft_utoa.c                                               \\               */
 /*                                                    .="""=._))              */
 /*   By: patricia <**@gmail.com>                     /  .*    .'              */
 /*                                                 `  /|                      */
 /*   				                     /_|__                    */
-/*   Created: 2024/10/23 18:21:59 by patricia          | `))                  */
-/*   Updated: 2024/10/23 18:21:59 by patricia          |                      */
+/*   Created: 2024/11/03 16:29:14 by patricia          | `))                  */
+/*   Updated: 2024/11/03 16:29:14 by patricia          |                      */
 /*                                               PINK -"== 24           🦩    */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "libft.h"
 
-int	ft_printf(const char *format, ...)
+char	*ft_utoa(unsigned int n)
 {
-	va_list	args;
-	int		total_displayed;
+	unsigned int	nlen;
+	char			*str;
+	int				len;
 
-	va_start(args, format);
-	total_displayed = pprint_and_return(format, args);
-	va_end(args);
-	return (total_displayed);
+	len = 1;
+	nlen = n;
+	while (nlen >= 10)
+	{
+		nlen /= 10;
+		len++;
+	}
+	str = malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
+	str[len] = '\0';
+	while (len > 0)
+	{
+		str[--len] = (n % 10) + '0';
+		n /= 10;
+	}
+	return (str);
 }

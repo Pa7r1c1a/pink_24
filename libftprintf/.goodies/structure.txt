@@ -7,17 +7,30 @@ libftprintf/
 │   └── ft_printf_bonus.h
 │
 ├── libft/
-│   └── ... (your libft files)
+│   └── ... ( libft files)
 │
 ├── src/
 │   ├── ft_printf.c
+│   ├── pprint_and_return.c
+│   ├── printf_print.c
 │   ├── print_char.c
 │   ├── print_string.c
 │   ├── print_integer.c
 │   ├── print_unsigned.c
 │   ├── print_hex.c
-│   ├── print_pointer.c
-│   ├── print_bonus_int.c
-│   └── print_bonus_hex.c
+│   └── print_pointer.c
+│
+├── src_bonus/
+│   ├── parse_flags_bonus.c
+│   ├── parse_precision_bonus.c
+│   ├── parse_width_bonus.c
+│   ├── set_additional_flags_bonus.c
+│   ├── set_justify_and_padding_bonus.c
+│   ├── print_char_bonus.c
+│   ├── print_string_bonus.c
+│   ├── print_integer_bonus.c
+│   ├── print_unsigned_bonus.c
+│   ├── print_hex_bonus.c
+│   └── print_pointer_bonus.c
 │
 └── Makefile

@@ -11,8 +11,8 @@
 /*                                               PINK -"== 24           🦩    */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
 #include "../libft/libft.h"
+#include "../include/ft_printf.h"
 
 int	print_hex(unsigned int n, int uppercase)
 {

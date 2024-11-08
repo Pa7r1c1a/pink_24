@@ -11,8 +11,7 @@
 /*                                               PINK -"== 24           🦩    */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-#include "libft.h"
+#include "include/ft_printf.h"
 
 int	main(void)
 {

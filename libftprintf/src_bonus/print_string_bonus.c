@@ -11,7 +11,8 @@
 /*                                               PINK -"== 24           🦩    */
 /* ************************************************************************** */
 
-#include "ft_printf_bonus.h"
+#include "../include/ft_printf_bonus.h"
+#include "../libft/libft.h"
 
 int	print_string_bonus(char *str, t_format format)
 {

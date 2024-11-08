@@ -31,24 +31,25 @@ static int	count_digits(int n)
 char	*ft_itoa(int n)
 {
 	int		len;
+	int		sign;
 	char	*result;
 
+	sign = (n < 0);
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	len = count_digits(n);
 	result = malloc(sizeof(char) * (len + 1));
 	if (!result)
 		return (NULL);
 	result[len] = '\0';
-	if (n < 0)
+	if (n == 0)
+		result[0] = '0';
+	if (sign)
 	{
-		if (n == -2147483648)
-		{
-			result[--len] = '8';
-			n /= 10;
-		}
-		n *= -1;
 		result[0] = '-';
+		n *= -1;
 	}
-	while (--len >= 0 && result[len] != '-')
+	while (--len >= sign)
 	{
 		result[len] = (n % 10) + '0';
 		n /= 10;

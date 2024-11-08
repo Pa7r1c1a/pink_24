@@ -20,7 +20,7 @@ int	printf_print(char specifier, va_list args)
 	else if (specifier == 's')
 		return (print_string(va_arg(args, char *)));
 	else if (specifier == 'd' || specifier == 'i')
-		return (print_integer(va_arg(args, int)));
+		return (print_integer(args));
 	else if (specifier == 'u')
 		return (print_unsigned(va_arg(args, unsigned int)));
 	else if (specifier == 'x')

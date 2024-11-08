@@ -1,15 +1,15 @@
 NAME = libftprintf.a
 
 CC = cc
-INCLUDES = -I$(INC_DIR) -I$(LIBFT_DIR)
-CFLAGS = -Wall -Wextra -Werror -g $(INCLUDES)
+INCLUDES = include
+CFLAGS = -Wall -Wextra -Werror -g
 
-AR = ar rcs
+AR = ar
+ARFLAGS = rcs
 RM = rm -f
 
 SRC_DIR = src
 BONUS_SRC_DIR = src_bonus
-INC_DIR = include
 LIBFT_DIR = libft
 
 SRCS = $(SRC_DIR)/ft_printf.c \
@@ -44,20 +44,23 @@ BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 all: $(NAME)
 
 # Build the library
-$(NAME): $(OBJS) $(LIBFT_DIR)/libft.a
-	@echo "Building $(NAME)..."
-	@$(AR) $(NAME) $(OBJS)
+$(NAME): $(OBJS)
+	$(MAKE) -C $(LIBFT_DIR)
+	cp $(LIBFT_DIR)/libft.a $(NAME)
+	@$(AR) $(ARFLAGS) $(NAME) $(OBJS)
 
 %.o: %.c
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -I$(INCLUDE) -I$(LIBFT_DIR) -c $< -o $@
 
 # Compile libft if not already compiled
 $(LIBFT_DIR)/libft.a:
 	@$(MAKE) -C $(LIBFT_DIR)
 
 # Bonus Rule
-bonus: $(OBJS) $(BONUS_OBJS) $(LIBFT_DIR)/libft.a
-	@$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
+bonus: $(BONUS_OBJS)
+	$(MAKE) -C $(LIBFT_DIR)
+	cp $(LIBFT_DIR)/libft.a $(NAME)
+	@$(AR) $(ARFLAGS) $(NAME) $(BONUS_OBJS)
 
 test: $(NAME)
 	@$(CC) $(CFLAGS) main.c -L. -l:libftprintf.a -L$(LIBFT_DIR) -l:libft.a -o test
@@ -67,11 +70,11 @@ run: test
 
 clean:
 	@$(RM) $(OBJS) $(BONUS_OBJS)
-	@$(MAKE) clean -C $(LIBFT_DIR)
+	@$(MAKE) -C $(LIBFT_DIR) clean
 
 fclean: clean
 	@$(RM) $(NAME)
-	@$(MAKE) fclean -C $(LIBFT_DIR)
+	@$(MAKE) -C $(LIBFT_DIR) fclean
 
 re: fclean all
 

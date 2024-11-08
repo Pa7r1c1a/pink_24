@@ -21,7 +21,7 @@
 # include <stdlib.h>
 # include <stdarg.h>
 # include <stddef.h>
-# include "libft.h"
+
 int			ft_printf(const char *format, ...);
 
 int			pprint_and_return(const char *format, va_list args);
@@ -29,7 +29,7 @@ int			printf_print(char specifier, va_list args);
 
 int			print_char(int c);
 int			print_string(char *str);
-int			print_integer(int n);
+int			print_integer(va_list args);
 int			print_unsigned(unsigned int n);
 int			print_hex(unsigned int n, int uppercase);
 int			print_pointer(void *ptr);

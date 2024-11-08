@@ -11,19 +11,20 @@
 /*                                               PINK -"== 24           🦩    */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
 #include "../libft/libft.h"
+#include "../include/ft_printf.h"
 
-int	print_integer(int n)
+int	print_integer(va_list args)
 {
 	char	*strn;
 	int		len;
+	int		n;
 
+	n = va_arg(args, int);
 	strn = ft_itoa(n);
 	if (!strn)
 		return (-1);
 	len = ft_strlen(strn);
-	ft_putstr_fd(strn, 1);
-	free(strn);
-	return (len);
+	write(1, strn, len);
+	return (free(strn), len);
 }
